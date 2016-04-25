@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <div>
+        <h1>Product List</h1>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><button class="btn btn-default" type="button" ng-click="vm.toggleImage()">{{vm.showImage ? "Hide" : "Show"}} image</button></th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in vm.products | orderBy: 'Price' : true">
+                <!--ng-show -> requests images even if they are hidden, ng-if -> request images only when needed to be shown -->
+                <td><img ng-if="vm.showImage" style="width:20px;" ng-src="{{product.imageUrl}}" title="{{product.imageName}}" /></td>
+                <td><a ui-sref="productDetail({productId: product.productId})">{{product.productName}}</a></td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.price | currency}}</td>
+                <td>
+                    <a class="btn btn-primary" ui-sref="productEdit.info({productId:product.productId})">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ACME Product Management</title>
+	<meta charset="utf-8" />
+
+    <!--CSS LIBRARIES-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="Content/toastr.css" rel="stylesheet" />
+    <link href="Content/angular-chart.css" rel="stylesheet" />
+
+    <!--LIBRARY SCRIPTS-->
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <!--For creating server request to get data-->
+    <script src="Scripts/angular-resource.js"></script>
+    <!--FOr mocking server-->
+    <script src="Scripts/angular-mocks.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    
+    <!--For styling-->
+    <script src="Scripts/bootstrap.js"></script>
+    <!--For mask edit-->
+    <script src="Scripts/angular-ui/ui-utils.js"></script>
+    <!--For datepicker-->
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <!--For notifications-->
+    <script src="Scripts/toastr.min.js"></script>
+    <!--Charts-->
+    <script src="Scripts/d3.js"></script>
+    <script src="Scripts/Chart.min.js"></script>
+    <script src="Scripts/angular-chart.js"></script>
+    <script src="Scripts/angular-charts.js"></script>
+
+    <!--Application script-->
+    <script src="app/app.js"></script>
+
+    <!--Controllers-->
+    <script src="app/products/productListCtrl.js"></script>
+    <script src="app/products/productDetailCtrl.js"></script>
+    <script src="app/products/productEditCtrl.js"></script>
+    <script src="app/prices/priceAnalyticsCtrl.js"></script>
+
+    <!--Services-->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
+    <script src="common/services/productService.js"></script>
+</head>
+<body ng-app="productManagement">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--ui-sref takes the state name, not the url-->
+                <a class="navbar-brand" ui-sref="home">ACME Product Management</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="productList">Product list</a></li>
+                    <li><a ui-sref="priceAnalytics">Price analytics</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"> </i> Add product</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+</html>

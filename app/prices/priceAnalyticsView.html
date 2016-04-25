@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <div>
+        <h1>{{title}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ac-chart="'bar'" ac-data="dataAmount" ac-config="configAmount" class="chart"></div>
+        </div>
+        <div class="col-md-12">
+            <div ac-chart="'bar'" ac-data="dataPercent" ac-config="configPercent" class="chart"></div>
+        </div>
+    </div>
+    <div class="row">
+        <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                chart-legend="true" chart-series="series" chart-click="onClick"></canvas> 
+    </div>
+</div>

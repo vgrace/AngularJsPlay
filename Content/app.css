@@ -1,0 +1,28 @@
+﻿body {
+}
+
+.wizard a {
+    background:#efefef;
+    display:inline-block; 
+    margin-right:5px;
+    min-width:150px;
+    outline:none;
+    padding:10px 40px 10px;
+    position:relative; 
+    text-decoration:none; 
+    color:#707070;
+}
+
+.wizard .active {
+    background: #707070;
+    color:#fff; 
+}
+
+.marginTop {
+    padding-top:30px; 
+}
+
+.chart {
+    width:100%; 
+    height:300px; 
+}

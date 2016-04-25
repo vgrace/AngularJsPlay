@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div>
+        <h2>{{vm.title}}</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="wizard">
+                <a ui-sref=".info" ui-sref-active="active">Basic Information</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="wizard">
+                <a ui-sref=".price" ui-sref-active="active">Price Information</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="wizard">
+                <a ui-sref=".tags" ui-sref-active="active">Tags Information</a>
+            </div>
+        </div>
+       
+    </div>
+    <div ui-view></div>
+</div>
